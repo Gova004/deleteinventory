@@ -1,0 +1,11 @@
+- name: Delete inventory invent01 in AWX using API token
+  hosts: localhost
+  gather_facts: no
+  tasks:
+    - name: Delete Inventory from AWX
+      ansible.controller.inventory:
+        name: "invent01"
+        state: absent
+        controller_host: "http://192.168.49.2:32275"
+        controller_oauthtoken: "ZhtfS0YyN5zzKMCQXdtvLua8JiV9hA"
+        validate_certs: no
