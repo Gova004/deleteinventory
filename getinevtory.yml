@@ -1,0 +1,9 @@
+- name: Delete inventory invent01 in AWX using API token
+  hosts: localhost
+  gather_facts: no
+  tasks:
+    - name: Get Inventory ID for invent01
+      uri:
+        url: "http://192.168.49.2:32275/api/v2/inventories/?name=invent01"
+        method: GET
+        headers:
