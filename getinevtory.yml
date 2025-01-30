@@ -1,4 +1,4 @@
-- name: Delete inventory invent01 in AWX using API token
+- name: Delete inventory invent01 in AWX using API tokenttt
   hosts: localhost
   gather_facts: no
   tasks:
